@@ -2,7 +2,7 @@
 <modDesc descVersion="22">
     <author>Freelance Modding Crew</author>
 
-    <version>0.0.1-BETA</version>
+    <version>0.0.2-BETA</version>
 
     <title>
         <en>Auto-unload for round-baler</en>
@@ -32,4 +32,10 @@ Decker_MMIV - fs-uk.com, forum.farming-simulator.com, modhoster.com]]>
     <extraSourceFiles>
         <sourceFile filename="BalerAutoUnload.lua" />
     </extraSourceFiles>
+    
+    <l10n>
+        <text name="ChangeAutoUnloadDelay"> <en>Change auto-unload delay (%s)</en></text>
+        <text name="DelaySeconds">          <en>%d sec.</en></text>
+        <text name="DelayOff">              <en>Off</en></text>
+    </l10n>
 </modDesc>
