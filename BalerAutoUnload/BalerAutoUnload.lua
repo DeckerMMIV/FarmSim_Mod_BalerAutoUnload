@@ -16,6 +16,22 @@ BalerAutoUnload.load = function(self, xmlFile)
     self.modAutoUnloadDelay = 0 -- off
 end
 
+BalerAutoUnload.getSaveAttributesAndNodes = function(self, superFunc, nodeIdent)
+    local attributes, nodes = superFunc(self,nodeIdent)
+    if self.modAutoUnloadDelay > 0 then
+        attributes = Utils.getNoNil(attributes,"")..(' autoUnloadDelay="%d"'):format(self.modAutoUnloadDelay)
+    end
+    return attributes, nodes
+end;
+
+BalerAutoUnload.loadFromAttributesAndNodes = function(self, superFunc, xmlFile, key, resetVehicles)
+    if not resetVehicles then
+        self.modAutoUnloadDelay = Utils.getNoNil(getXMLInt(xmlFile, key.."#autoUnloadDelay"),0) % 6;
+    end;
+    return superFunc(self,xmlFile,key,resetVehicles)
+end
+
+
 BalerAutoUnload.setAutoUnloadDelay = function(self, newValue, noEventSend)
     self.modAutoUnloadDelay = (newValue % 6)
     self.modAutoUnloadTimeout = nil
@@ -30,7 +46,7 @@ end
 BalerAutoUnload.update = function(self,dt)
     if self.isClient and self.baleUnloadAnimationName ~= nil then
         if self:getIsActiveForInput() then
-            if InputBinding.hasEvent(InputBinding.IMPLEMENT_EXTRA3) then
+            if InputBinding.hasEvent(InputBinding.IMPLEMENT_EXTRA4) then
                 self:setAutoUnloadDelay(self.modAutoUnloadDelay - 1)
             end
         end
@@ -61,9 +77,9 @@ end
 BalerAutoUnload.draw = function(self)
     if self.isClient and self.baleUnloadAnimationName ~= nil then
         if self.modAutoUnloadDelay > 0 then
-            g_currentMission:addHelpButtonText(g_i18n:getText("ChangeAutoUnloadDelay"):format(g_i18n:getText("DelaySeconds"):format(self.modAutoUnloadDelay)), InputBinding.IMPLEMENT_EXTRA3);
+            g_currentMission:addHelpButtonText(g_i18n:getText("ChangeAutoUnloadDelay"):format(g_i18n:getText("DelaySeconds"):format(self.modAutoUnloadDelay)), InputBinding.IMPLEMENT_EXTRA4);
         else
-            g_currentMission:addHelpButtonText(g_i18n:getText("ChangeAutoUnloadDelay"):format(g_i18n:getText("DelayOff")), InputBinding.IMPLEMENT_EXTRA3);
+            g_currentMission:addHelpButtonText(g_i18n:getText("ChangeAutoUnloadDelay"):format(g_i18n:getText("DelayOff")), InputBinding.IMPLEMENT_EXTRA4);
         end
     end
 end
@@ -73,6 +89,8 @@ Baler.load       = Utils.appendedFunction(Baler.load,       BalerAutoUnload.load
 Baler.update     = Utils.appendedFunction(Baler.update,     BalerAutoUnload.update    )
 Baler.updateTick = Utils.appendedFunction(Baler.updateTick, BalerAutoUnload.updateTick)
 Baler.draw       = Utils.appendedFunction(Baler.draw,       BalerAutoUnload.draw      )
+Baler.getSaveAttributesAndNodes  = Utils.overwrittenFunction(Baler.getSaveAttributesAndNodes , BalerAutoUnload.getSaveAttributesAndNodes )
+Baler.loadFromAttributesAndNodes = Utils.overwrittenFunction(Baler.loadFromAttributesAndNodes, BalerAutoUnload.loadFromAttributesAndNodes)
 
 ---
 ---
