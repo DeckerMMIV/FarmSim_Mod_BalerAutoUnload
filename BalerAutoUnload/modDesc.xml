@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="22">
-    <author>Freelance Modding Crew</author>
+<modDesc descVersion="25">
+    <author>Decker_MMIV</author>
 
-    <version>0.0.3-BETA</version>
+    <contributors></contributors>
+
+    <version>0.0.4-BETA</version>
 
     <title>
         <en>Auto-unload for round-baler</en>
@@ -19,7 +21,7 @@
         <en>
 <![CDATA[Causes the round-baler to auto-unload when 100% full
 
-Decker_MMIV - fs-uk.com, forum.farming-simulator.com, modhoster.com]]>
+Decker_MMIV - fs-uk.com, modcentral.co.uk, forum.farming-simulator.com, modhoster.com]]>
         </en>
     </description>
 
