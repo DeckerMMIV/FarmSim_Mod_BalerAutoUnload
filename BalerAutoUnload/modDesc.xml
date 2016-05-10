@@ -4,17 +4,10 @@
 
     <contributors></contributors>
 
-    <version>0.0.4-BETA</version>
+    <version>1.0.0</version>
 
     <title>
         <en>Auto-unload for round-baler</en>
-        <de>Auto-unload for round-baler</de>
-        <ru>Auto-unload for round-baler</ru>
-        <cz>Auto-unload for round-baler</cz>
-        <fr>Auto-unload for round-baler</fr>
-        <it>Auto-unload for round-baler</it>
-        <es>Auto-unload for round-baler</es>
-        <pl>Auto-unload for round-baler</pl>
     </title>
     
     <description>
@@ -29,15 +22,9 @@ Decker_MMIV - fs-uk.com, modcentral.co.uk, forum.farming-simulator.com, modhoste
 
     <multiplayer supported="true"/> <!-- I do not know, but I think it works in multiplayer -->
 
-    <!--l10n filenamePrefix="modDesc_l10n" /--> <!-- Load the corresponding modDesc_l10n_<language>.XML file, or revert to 'en'/'de'. -->
+    <l10n filenamePrefix="modDesc_l10n" /> <!-- Load the corresponding modDesc_l10n_<language>.XML file, or revert to 'en'/'de'. -->
 
     <extraSourceFiles>
         <sourceFile filename="BalerAutoUnload.lua" />
     </extraSourceFiles>
-    
-    <l10n>
-        <text name="ChangeAutoUnloadDelay"> <en>Change auto-unload delay (%s)</en></text>
-        <text name="DelaySeconds">          <en>%d sec.</en></text>
-        <text name="DelayOff">              <en>Off</en></text>
-    </l10n>
 </modDesc>
