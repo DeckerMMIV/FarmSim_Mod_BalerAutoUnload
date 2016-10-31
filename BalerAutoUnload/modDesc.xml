@@ -1,30 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="25">
-    <author>Decker_MMIV</author>
+<modDesc descVersion="32">
+    <author>Decker_MMIV (DCK)</author>
+    <authorContact>fs-uk.com, modcentral.co.uk, forum.farming-simulator.com</authorContact>
 
-    <contributors></contributors>
+    <contributors>Ziuta</contributors>
 
-    <version>1.0.0</version>
+    <version>1.0.0.17</version>
 
     <title>
-        <en>Auto-unload for round-baler</en>
+        <en>Automatic unload for round-balers</en>
+        <de>Automatic unload for round-balers</de>
+        <fr>Automatic unload for round-balers</fr>
+        <pl>Auto-rozładunek dla prasy belującej</pl>
     </title>
     
     <description>
         <en>
-<![CDATA[Causes the round-baler to auto-unload when 100% full
-
-Decker_MMIV - fs-uk.com, modcentral.co.uk, forum.farming-simulator.com, modhoster.com]]>
+<![CDATA[Causes the round-baler to automatically unload when 100% full
+]]>
         </en>
+        <de>
+<![CDATA[Veranlasst die Rundballenpresse automatisch hochzuladen, wenn 100% voll sind
+]]>
+        </de>
+        <fr>
+<![CDATA[Provoque la ronde-presse à balles pour télécharger automatiquement lorsque 100% de la pleine
+]]>
+        </fr>
     </description>
 
     <iconFilename>store_BalerAutoUnload.dds</iconFilename>
-
-    <multiplayer supported="true"/> <!-- I do not know, but I think it works in multiplayer -->
+    <multiplayer supported="true"/>
 
     <l10n filenamePrefix="modDesc_l10n" /> <!-- Load the corresponding modDesc_l10n_<language>.XML file, or revert to 'en'/'de'. -->
 
     <extraSourceFiles>
-        <sourceFile filename="BalerAutoUnload.lua" />
+        <sourceFile filename="register.lua" />
     </extraSourceFiles>
 </modDesc>

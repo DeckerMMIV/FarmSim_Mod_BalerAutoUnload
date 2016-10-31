@@ -1,8 +1,9 @@
 --
 --  Auto-unload for Round-baler
 --
--- @author  Decker_MMIV - fs-uk.com, forum.farming-simulator.com, modhoster.com
--- @date    2015-04-xx
+-- @author  Decker_MMIV (DCK)
+-- @contact fs-uk.com, modcentral.co.uk, forum.farming-simulator.com
+-- @date    2016-11-xx
 --
 
 BalerAutoUnload = {}
@@ -11,26 +12,30 @@ local modItem = ModsUtil.findModItemByModName(g_currentModName);
 BalerAutoUnload.version = (modItem and modItem.version) and modItem.version or "?.?.?";
 
 
-BalerAutoUnload.load = function(self, xmlFile)
-    self.setAutoUnloadDelay = BalerAutoUnload.setAutoUnloadDelay
-    self.modAutoUnloadDelay = 0 -- off
+BalerAutoUnload.prerequisitesPresent = function(specializations)
+    return true;
 end
 
-BalerAutoUnload.getSaveAttributesAndNodes = function(self, superFunc, nodeIdent)
-    local attributes, nodes = superFunc(self,nodeIdent)
+BalerAutoUnload.delete = function(self) end
+BalerAutoUnload.mouseEvent = function(self, posX, posY, isDown, isUp, button) end
+BalerAutoUnload.keyEvent = function(self, unicode, sym, modifier, isDown) end
+
+BalerAutoUnload.load = function(self, savegame)
+    self.setAutoUnloadDelay = BalerAutoUnload.setAutoUnloadDelay
+    self.modAutoUnloadDelay = 0 -- off
+
+    if savegame ~= nil and not savegame.resetVehicles then
+        self.modAutoUnloadDelay = Utils.getNoNil(getXMLInt(savegame.xmlFile, savegame.key .. "#autoUnloadDelay"), 0) % 6;
+    end;
+end
+
+BalerAutoUnload.getSaveAttributesAndNodes = function(self, nodeIdent)
+    local attributes, nodes
     if self.modAutoUnloadDelay > 0 then
-        attributes = Utils.getNoNil(attributes,"")..(' autoUnloadDelay="%d"'):format(self.modAutoUnloadDelay)
+        attributes = ('autoUnloadDelay="%d"'):format(self.modAutoUnloadDelay)
     end
     return attributes, nodes
 end;
-
-BalerAutoUnload.loadFromAttributesAndNodes = function(self, superFunc, xmlFile, key, resetVehicles)
-    if not resetVehicles then
-        self.modAutoUnloadDelay = Utils.getNoNil(getXMLInt(xmlFile, key.."#autoUnloadDelay"),0) % 6;
-    end;
-    return superFunc(self,xmlFile,key,resetVehicles)
-end
-
 
 BalerAutoUnload.setAutoUnloadDelay = function(self, newValue, noEventSend)
     self.modAutoUnloadDelay = (newValue % 6)
@@ -41,10 +46,12 @@ BalerAutoUnload.setAutoUnloadDelay = function(self, newValue, noEventSend)
     elseif noEventSend ~= true then
         g_client:getServerConnection():sendEvent(BalerAutoUnloadEvent:new(self, self.modAutoUnloadDelay));
     end
+    
+    print("AutoUnloadDelay="..tostring(self.modAutoUnloadDelay))
 end
 
 BalerAutoUnload.update = function(self,dt)
-    if self.isClient and self.baleUnloadAnimationName ~= nil then
+    if self.isClient and self.baler.baleUnloadAnimationName ~= nil then
         if self:getIsActiveForInput() then
             if InputBinding.hasEvent(InputBinding.IMPLEMENT_EXTRA4) then
                 self:setAutoUnloadDelay(self.modAutoUnloadDelay - 1)
@@ -54,10 +61,10 @@ BalerAutoUnload.update = function(self,dt)
 end
 
 BalerAutoUnload.updateTick = function(self,dt)
-    if self.isServer and self.modAutoUnloadDelay > 0 then
-        if self.balerUnloadingState == Baler.UNLOADING_CLOSED then
-            if self.fillLevel >= self.capacity then
-                if (table.getn(self.bales) > 0) and self:isUnloadingAllowed() then
+    if self.isServer and self.modAutoUnloadDelay > 0 and self:getIsTurnedOn() then
+        if self.baler.unloadingState == Baler.UNLOADING_CLOSED then
+            if self:getUnitFillLevel(self.baler.fillUnitIndex) >= self:getUnitCapacity(self.baler.fillUnitIndex) then
+                if (table.getn(self.baler.bales) > 0) and self:isUnloadingAllowed() then
                     if self.modAutoUnloadTimeout == nil then
                         self.modAutoUnloadTimeout = g_currentMission.time + (self.modAutoUnloadDelay * 1000)
                     elseif self.modAutoUnloadTimeout < g_currentMission.time then
@@ -65,7 +72,7 @@ BalerAutoUnload.updateTick = function(self,dt)
                     end
                 end
             end
-        elseif self.balerUnloadingState == Baler.UNLOADING_OPEN then
+        elseif self.baler.unloadingState == Baler.UNLOADING_OPEN then
             if self.modAutoUnloadTimeout ~= nil then
                 self.modAutoUnloadTimeout = nil
                 self:setIsUnloadingBale(false);
@@ -75,26 +82,17 @@ BalerAutoUnload.updateTick = function(self,dt)
 end
 
 BalerAutoUnload.draw = function(self)
-    if self.isClient and self.baleUnloadAnimationName ~= nil then
+    if self.isClient and self.baler.baleUnloadAnimationName ~= nil then
         if self.modAutoUnloadDelay > 0 then
-            g_currentMission:addHelpButtonText(g_i18n:getText("ChangeAutoUnloadDelay"):format(g_i18n:getText("DelaySeconds"):format(self.modAutoUnloadDelay)), InputBinding.IMPLEMENT_EXTRA4);
+            g_currentMission:addHelpButtonText(g_i18n:getText("ChangeAutoUnloadDelay"):format(g_i18n:getText("DelaySeconds"):format(self.modAutoUnloadDelay)), InputBinding.IMPLEMENT_EXTRA4, nil, GS_PRIO_NORMAL);
         else
-            g_currentMission:addHelpButtonText(g_i18n:getText("ChangeAutoUnloadDelay"):format(g_i18n:getText("DelayOff")), InputBinding.IMPLEMENT_EXTRA4);
+            g_currentMission:addHelpButtonText(g_i18n:getText("ChangeAutoUnloadDelay"):format(g_i18n:getText("DelayOff")), InputBinding.IMPLEMENT_EXTRA4, nil, GS_PRIO_NORMAL);
         end
     end
 end
 
-
-Baler.load       = Utils.appendedFunction(Baler.load,       BalerAutoUnload.load      )
-Baler.update     = Utils.appendedFunction(Baler.update,     BalerAutoUnload.update    )
-Baler.updateTick = Utils.appendedFunction(Baler.updateTick, BalerAutoUnload.updateTick)
-Baler.draw       = Utils.appendedFunction(Baler.draw,       BalerAutoUnload.draw      )
-Baler.getSaveAttributesAndNodes  = Utils.overwrittenFunction(Baler.getSaveAttributesAndNodes , BalerAutoUnload.getSaveAttributesAndNodes )
-Baler.loadFromAttributesAndNodes = Utils.overwrittenFunction(Baler.loadFromAttributesAndNodes, BalerAutoUnload.loadFromAttributesAndNodes)
-
 ---
 ---
-
 
 BalerAutoUnloadEvent = {};
 BalerAutoUnloadEvent_mt = Class(BalerAutoUnloadEvent, Event);
