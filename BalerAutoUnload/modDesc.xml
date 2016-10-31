@@ -12,7 +12,7 @@
         <fr>Auto-unload for round-baler</fr>
         <it>Auto-unload for round-baler</it>
         <es>Auto-unload for round-baler</es>
-        <pl>Auto-unload for round-baler</pl>
+        <pl>Auto-rozładunek dla prasy belującej</pl>
     </title>
     
     <description>
@@ -34,8 +34,8 @@ Decker_MMIV - fs-uk.com, forum.farming-simulator.com, modhoster.com]]>
     </extraSourceFiles>
     
     <l10n>
-        <text name="ChangeAutoUnloadDelay"> <en>Change auto-unload delay (%s)</en></text>
-        <text name="DelaySeconds">          <en>%d sec.</en></text>
-        <text name="DelayOff">              <en>Off</en></text>
+        <text name="ChangeAutoUnloadDelay"> <en>Change auto-unload delay (%s)</en><pl>Zmień opóźnienie auto-rozładunku (%s)</pl></text>
+        <text name="DelaySeconds">          <en>%d sec.</en><pl>%d sek.</pl></text>
+        <text name="DelayOff">              <en>Off</en><pl>Wył.</pl></text>
     </l10n>
 </modDesc>
