@@ -47,7 +47,7 @@ BalerAutoUnload.setAutoUnloadDelay = function(self, newValue, noEventSend)
         g_client:getServerConnection():sendEvent(BalerAutoUnloadEvent:new(self, self.modAutoUnloadDelay));
     end
     
-    print("AutoUnloadDelay="..tostring(self.modAutoUnloadDelay))
+    --print("AutoUnloadDelay="..tostring(self.modAutoUnloadDelay))
 end
 
 BalerAutoUnload.update = function(self,dt)
