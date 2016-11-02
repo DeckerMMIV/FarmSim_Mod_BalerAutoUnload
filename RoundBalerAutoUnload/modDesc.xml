@@ -17,14 +17,20 @@
     <description>
         <en>
 <![CDATA[Causes the round-baler to automatically unload when 100% full
+
+Set unload-delay between 1-5 seconds or off.
 ]]>
         </en>
         <de>
 <![CDATA[Veranlasst die Rundballenpresse automatisch hochzuladen, wenn 100% voll sind
+
+Stellen Sie die Verzögerung zwischen 1 und 5 Sekunden ein oder aus.
 ]]>
         </de>
         <fr>
 <![CDATA[Provoque la ronde-presse à balles pour télécharger automatiquement lorsque 100% de la pleine
+
+Réglez le retard de charge entre 1-5 secondes ou désactivé.
 ]]>
         </fr>
     </description>
