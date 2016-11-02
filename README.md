@@ -1,5 +1,9 @@
 # Farming Simulator modification - Auto-unload for round-baler
 
+To read more about this mod, find it on;
+- http://fs-uk.com - http://fs-uk.com/mods/list/team/45
+- http://modcentral.co.uk - http://modcentral.co.uk/resources/authors/decker_mmiv.18/
+
 
 ## FS17 - Change-log
 1.0.0.17
