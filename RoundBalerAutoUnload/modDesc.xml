@@ -7,13 +7,13 @@
     NOTE: For contributing translations, DO NOT edit this ModDesc.XML.
           Only modify the corresponding ModDesc_l10n_*.XML file.
 -->    
-    <contributors>Ziuta</contributors>
+    <contributors>Ziuta, ModHub</contributors>
 
     <version>1.0.1.17</version>
 
     <title>
         <en>Automatic unload for round-balers</en>
-        <de>Automatische Entladung für Rundballenpressen</de>
+        <de>Automatisches auswerfen der Rundballen</de>
         <fr>Déchargement automatique pour presse à balles rondes</fr>
         <pl>Auto-rozładunek dla prasy belującej</pl>
     </title>
@@ -25,10 +25,10 @@
 Set unload-delay between 1-5 seconds or off.
 ]]>
         </en>
-        <de> <!-- translate.google.com -->
-<![CDATA[Veranlasst die Rundballenpresse automatisch zu entladen, wenn 100% voll sind
+        <de>
+<![CDATA[Dieser Mod bewirkt, dass sich die Rundballenpresse nach dem Pressvorgang automatisch öffnet und schließt.
 
-Leerlaufverzögerung zwischen 1 und 5 Sekunden einstellen oder ausschalten.
+Die Verzögerung zum Öffnen der Presskammer kann von 1-5sec eingestellt (Taste Y) oder auch deaktiviert werden werden (Originalzustand -> Presskammer manuell öffnen)
 ]]>
         </de>
         <fr> <!-- translate.google.com -->

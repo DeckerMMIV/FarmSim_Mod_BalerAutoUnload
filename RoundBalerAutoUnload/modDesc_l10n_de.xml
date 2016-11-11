@@ -7,18 +7,18 @@
 
     <!-- Add your own name or nickname here, when you contribute to this file's translation, so I know who to put into the credits. -->
     <translationContributors>
-
+        ModHub (GIANTS Software)
     </translationContributors>
 
     <!-- Note that 'description' is only here for easier translations. I will manually copy it to ModDesc.XML later. -->
     <description>
-Veranlasst die Rundballenpresse automatisch zu entladen, wenn 100% voll sind
+Dieser Mod bewirkt, dass sich die Rundballenpresse nach dem Pressvorgang automatisch öffnet und schließt.
 
-Leerlaufverzögerung zwischen 1 und 5 Sekunden einstellen oder ausschalten.
+Die Verzögerung zum Öffnen der Presskammer kann von 1-5sec eingestellt (Taste Y) oder auch deaktiviert werden werden (Originalzustand -> Presskammer manuell öffnen)
     </description>
 
     <texts>
-        <text name="ChangeAutoUnloadDelay" text="Automatische Entladeverzögerung ändern (%s)" />
+        <text name="ChangeAutoUnloadDelay" text="Verzoegerung Ballen auswerfen (%s)" />
         <text name="DelaySeconds"          text="%d Sek." />
         <text name="DelayOff"              text="Aus" />
     </texts>
