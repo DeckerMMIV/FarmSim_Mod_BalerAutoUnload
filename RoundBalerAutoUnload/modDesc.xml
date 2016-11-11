@@ -9,12 +9,12 @@
 -->    
     <contributors>Ziuta</contributors>
 
-    <version>1.0.0.17</version>
+    <version>1.0.1.17</version>
 
     <title>
         <en>Automatic unload for round-balers</en>
-        <de>Automatic unload for round-balers</de>
-        <fr>Automatic unload for round-balers</fr>
+        <de>Automatische Entladung für Rundballenpressen</de>
+        <fr>Déchargement automatique pour presse à balles rondes</fr>
         <pl>Auto-rozładunek dla prasy belującej</pl>
     </title>
     
@@ -25,18 +25,24 @@
 Set unload-delay between 1-5 seconds or off.
 ]]>
         </en>
-        <de>
-<![CDATA[Veranlasst die Rundballenpresse automatisch hochzuladen, wenn 100% voll sind
+        <de> <!-- translate.google.com -->
+<![CDATA[Veranlasst die Rundballenpresse automatisch zu entladen, wenn 100% voll sind
 
-Stellen Sie die Verzögerung zwischen 1 und 5 Sekunden ein oder aus.
+Leerlaufverzögerung zwischen 1 und 5 Sekunden einstellen oder ausschalten.
 ]]>
         </de>
-        <fr>
-<![CDATA[Provoque la ronde-presse à balles pour télécharger automatiquement lorsque 100% de la pleine
+        <fr> <!-- translate.google.com -->
+<![CDATA[Permet à la presse à balles rondes de se décharger automatiquement lorsqu'elle est pleine à 100%
 
-Réglez le retard de charge entre 1-5 secondes ou désactivé.
+Réglez le délai de déchargement entre 1-5 secondes ou désactivé.
 ]]>
         </fr>
+        <pl> <!-- translate.google.com -->
+<![CDATA[Powoduje round-prasę do automatycznego rozładunku przy 100% pełna
+
+Ustaw rozładować opóźnienia między 1-5 sekund lub wyłączyć.
+]]>
+        </pl>
     </description>
 
     <iconFilename>store_BalerAutoUnload.dds</iconFilename>

@@ -12,14 +12,14 @@
 
     <!-- Note that 'description' is only here for easier translations. I will manually copy it to ModDesc.XML later. -->
     <description>
-Causes the round-baler to automatically unload when 100% full
+Veranlasst die Rundballenpresse automatisch zu entladen, wenn 100% voll sind
 
-Set unload-delay between 1-5 seconds or off.
+Leerlaufverzögerung zwischen 1 und 5 Sekunden einstellen oder ausschalten.
     </description>
 
     <texts>
-        <text name="ChangeAutoUnloadDelay" text="Change auto-unload delay (%s)" />
-        <text name="DelaySeconds"          text="%d sec." />
-        <text name="DelayOff"              text="Off" />
+        <text name="ChangeAutoUnloadDelay" text="Automatische Entladeverzögerung ändern (%s)" />
+        <text name="DelaySeconds"          text="%d Sek." />
+        <text name="DelayOff"              text="Aus" />
     </texts>
 </l10n>

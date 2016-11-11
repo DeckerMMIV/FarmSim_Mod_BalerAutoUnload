@@ -12,14 +12,14 @@
 
     <!-- Note that 'description' is only here for easier translations. I will manually copy it to ModDesc.XML later. -->
     <description>
-Causes the round-baler to automatically unload when 100% full
+Permet à la presse à balles rondes de se décharger automatiquement lorsqu'elle est pleine à 100%
 
-Set unload-delay between 1-5 seconds or off.
+Réglez le délai de déchargement entre 1-5 secondes ou désactivé.
     </description>
 
     <texts>
-        <text name="ChangeAutoUnloadDelay" text="Change auto-unload delay (%s)" />
-        <text name="DelaySeconds"          text="%d sec." />
-        <text name="DelayOff"              text="Off" />
+        <text name="ChangeAutoUnloadDelay" text="Modifier le délai d'auto-déchargement (%s)" />
+        <text name="DelaySeconds"          text="%d seconde" />
+        <text name="DelayOff"              text="en congé" />
     </texts>
 </l10n>
