@@ -6,6 +6,9 @@ To read more about this mod, find it on;
 
 
 ## FS17 - Change-log
+1.0.2.21
+- Fix multiplayer related error
+
 1.0.1.18
 - Translation updates, due to request from ModHub
 
