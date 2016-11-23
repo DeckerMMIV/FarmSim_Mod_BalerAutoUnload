@@ -12,10 +12,10 @@
     </translationContributors>
 
     <!-- Note that 'description' is only here for easier translations. I will manually copy it to ModDesc.XML later. -->
-    <description> <!-- translate.google.com -->
-Powoduje round-prasę do automatycznego rozładunku przy 100% pełna
+    <description>
+Automatyczny wyładunek, gdy prasa rolująca jest w 100% pełna.
 
-Ustaw rozładować opóźnienia między 1-5 sekund lub wyłączyć.
+Ustwa opóźnienie automatycznego rozładunku pomiędzy 1-5 sekundy lub wyłącz je.
     </description>
 
     <texts>
