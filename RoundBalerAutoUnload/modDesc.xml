@@ -7,15 +7,16 @@
     NOTE: For contributing translations, DO NOT edit this ModDesc.XML.
           Only modify the corresponding ModDesc_l10n_*.XML file.
 -->    
-    <contributors>Ziuta, ModHub</contributors>
+    <contributors>Ziuta, ModHub, Vanquish081</contributors>
 
-    <version>1.0.2.21</version>
+    <version>1.0.2.22</version>
 
     <title>
         <en>Automatic unload for round-balers</en>
         <de>Automatisches auswerfen der Rundballen</de>
         <fr>Déchargement automatique pour presse à balles rondes</fr>
         <pl>Auto-rozładunek dla prasy belującej</pl>
+        <es>Automatic unload for round-balers</es>
     </title>
     
     <description>
@@ -37,12 +38,18 @@ Die Verzögerung zum Öffnen der Presskammer kann von 1-5sec eingestellt (Taste 
 Réglez le délai de déchargement entre 1-5 secondes ou désactivé.
 ]]>
         </fr>
-        <pl> <!-- translate.google.com -->
-<![CDATA[Powoduje round-prasę do automatycznego rozładunku przy 100% pełna
+        <pl>
+<![CDATA[Automatyczny wyładunek, gdy prasa rolująca jest w 100% pełna.
 
-Ustaw rozładować opóźnienia między 1-5 sekund lub wyłączyć.
+Ustwa opóźnienie automatycznego rozładunku pomiędzy 1-5 sekundy lub wyłącz je.
 ]]>
         </pl>
+        <es>
+<![CDATA[Este mod hace que se descargue automáticamente la empacadora de balas redondas cuando esta al 100%
+
+Puedes fijar el retardo de la descarga entre 1-5 segundos o desactivar la función.
+]]>
+        </es>
     </description>
 
     <iconFilename>store_BalerAutoUnload.dds</iconFilename>
