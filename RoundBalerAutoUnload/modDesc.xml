@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="32">
+    <author>Decker_MMIV (DCK)</author>
+    <authorContact>fs-uk.com, modcentral.co.uk, forum.farming-simulator.com</authorContact>
+
+<!--
+    NOTE: For contributing translations, DO NOT edit this ModDesc.XML.
+          Only modify the corresponding ModDesc_l10n_*.XML file.
+-->    
+    <contributors>Ziuta, ModHub</contributors>
+
+    <version>1.0.2.21</version>
+
+    <title>
+        <en>Automatic unload for round-balers</en>
+        <de>Automatisches auswerfen der Rundballen</de>
+        <fr>Déchargement automatique pour presse à balles rondes</fr>
+        <pl>Auto-rozładunek dla prasy belującej</pl>
+    </title>
+    
+    <description>
+        <en>
+<![CDATA[Causes the round-baler to automatically unload when 100% full
+
+Set unload-delay between 1-5 seconds or off.
+]]>
+        </en>
+        <de>
+<![CDATA[Dieser Mod bewirkt, dass sich die Rundballenpresse nach dem Pressvorgang automatisch öffnet und schließt.
+
+Die Verzögerung zum Öffnen der Presskammer kann von 1-5sec eingestellt (Taste Y) oder auch deaktiviert werden werden (Originalzustand -> Presskammer manuell öffnen)
+]]>
+        </de>
+        <fr> <!-- translate.google.com -->
+<![CDATA[Permet à la presse à balles rondes de se décharger automatiquement lorsqu'elle est pleine à 100%
+
+Réglez le délai de déchargement entre 1-5 secondes ou désactivé.
+]]>
+        </fr>
+        <pl> <!-- translate.google.com -->
+<![CDATA[Powoduje round-prasę do automatycznego rozładunku przy 100% pełna
+
+Ustaw rozładować opóźnienia między 1-5 sekund lub wyłączyć.
+]]>
+        </pl>
+    </description>
+
+    <iconFilename>store_BalerAutoUnload.dds</iconFilename>
+    <multiplayer supported="true"/>
+
+    <l10n filenamePrefix="modDesc_l10n" /> <!-- Load the corresponding modDesc_l10n_<language>.XML file, or revert to 'en'/'de'. -->
+
+    <extraSourceFiles>
+        <sourceFile filename="register.lua" />
+    </extraSourceFiles>
+</modDesc>

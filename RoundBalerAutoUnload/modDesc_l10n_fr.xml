@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <!-- 
+        Please contribute any other translations at 
+        https://github.com/DeckerMMIV/FarmSim_Mod_BalerAutoUnload
+    -->
+
+    <!-- Add your own name or nickname here, when you contribute to this file's translation, so I know who to put into the credits. -->
+    <translationContributors>
+        translate.google.com
+    </translationContributors>
+
+    <!-- Note that 'description' is only here for easier translations. I will manually copy it to ModDesc.XML later. -->
+    <description>
+Permet à la presse à balles rondes de se décharger automatiquement lorsqu'elle est pleine à 100%
+
+Réglez le délai de déchargement entre 1-5 secondes ou désactivé.
+    </description>
+
+    <texts>
+        <text name="ChangeAutoUnloadDelay" text="Modifier le délai d'auto-déchargement (%s)" />
+        <text name="DelaySeconds"          text="%d seconde" />
+        <text name="DelayOff"              text="en congé" />
+    </texts>
+</l10n>
