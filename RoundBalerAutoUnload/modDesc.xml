@@ -7,9 +7,9 @@
     NOTE: For contributing translations, DO NOT edit this ModDesc.XML.
           Only modify the corresponding ModDesc_l10n_*.XML file.
 -->    
-    <contributors>Ziuta, ModHub, Vanquish081</contributors>
+    <contributors>Ziuta, ModHub, Vanquish081, Paxly</contributors>
 
-    <version>1.0.2.22</version>
+    <version>1.0.2.23</version>
 
     <title>
         <en>Automatic unload for round-balers</en>
@@ -17,6 +17,7 @@
         <fr>Déchargement automatique pour presse à balles rondes</fr>
         <pl>Auto-rozładunek dla prasy belującej</pl>
         <es>Automatic unload for round-balers</es>
+        <it>Automatic unload for round-balers</it>
     </title>
     
     <description>
@@ -50,6 +51,12 @@ Ustwa opóźnienie automatycznego rozładunku pomiędzy 1-5 sekundy lub wyłącz
 Puedes fijar el retardo de la descarga entre 1-5 segundos o desactivar la función.
 ]]>
         </es>
+        <it>
+<![CDATA[Scarica automaticamente l'imballatrice quando è piena al 100%
+
+Seleziona il ritardo di scarico tra 1 e 5 secondi o disabilita.
+]]>
+        </it>
     </description>
 
     <iconFilename>store_BalerAutoUnload.dds</iconFilename>

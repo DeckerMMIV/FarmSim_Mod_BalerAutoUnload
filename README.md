@@ -6,6 +6,9 @@ To read more about this mod, find it on;
 
 
 ## FS17 - Change-log
+1.0.2.23
+- Italian translation added, by Paxly
+
 1.0.2.22
 - Spanish translation added, by Vanquish081
 - Polish translation updated, by Ziuta
