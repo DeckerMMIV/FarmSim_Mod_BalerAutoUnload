@@ -7,18 +7,18 @@
 
     <!-- Add your own name or nickname here, when you contribute to this file's translation, so I know who to put into the credits. -->
     <translationContributors>
-        Decker_MMIV
+        Paxly
     </translationContributors>
 
     <!-- Note that 'description' is only here for easier translations. I will manually copy it to ModDesc.XML later. -->
     <description>
-Causes the round-baler to automatically unload when 100% full
+Scarica automaticamente l'imballatrice quando è piena al 100%
 
-Set unload-delay between 1-5 seconds or off.
+Seleziona il ritardo di scarico tra 1 e 5 secondi o disabilita.
     </description>
 
     <texts>
-        <text name="ChangeAutoUnloadDelay" text="Change auto-unload delay (%s)" />
+        <text name="ChangeAutoUnloadDelay" text="Cambia ritardo di scarico (%s)" />
         <text name="DelaySeconds"          text="%d sec." />
         <text name="DelayOff"              text="Off" />
     </texts>
