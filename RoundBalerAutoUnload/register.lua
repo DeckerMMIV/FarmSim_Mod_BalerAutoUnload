@@ -42,7 +42,11 @@ end
 
 function RegistrationHelper_AutoUnload_RB:register()
     for _, vehicle in pairs(VehicleTypeUtil.vehicleTypes) do
-        if vehicle ~= nil and SpecializationUtil.hasSpecialization(Baler, vehicle.specializations) then
+        if vehicle ~= nil 
+        and (  SpecializationUtil.hasSpecialization(Baler, vehicle.specializations)
+            or SpecializationUtil.hasSpecialization(BaleWrapper, vehicle.specializations)
+            )
+        then
             table.insert(vehicle.specializations, SpecializationUtil.getSpecialization("BalerAutoUnload"))
         end
     end

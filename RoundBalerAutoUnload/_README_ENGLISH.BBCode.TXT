@@ -1,14 +1,18 @@
-[b]Automatic unload for round-balers[/b]
+[b]Automatic unload for round-balers & bale-wrappers[/b]
 
 
 [b][u]Changelog[/u][/b]
+1.1.0.24
+- Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
+- Support for balewrapper
+
 1.0.2.21
 - Upgraded to FS17
 
 
 [b][u]Mod description[/u][/b]
 
-With this mod you can set a round-baler, when it is 100% full, to automatically unload after a short delay of 1-5 seconds (configurable).
+With this mod you can set a round-baler or bale-wrapper, when it is 100% full, to automatically unload after a short delay of 1-5 seconds (configurable).
 
 Remember it will NOT brake nor stop the vehicle - that you must do yourself!
 
@@ -33,3 +37,4 @@ Script:
 - Decker_MMIV
 Contributors/Translations for this or previous versions:
 - Gonimy_Vetrom, Ziuta, JakobT, Xno, huseyinsayar, ModHub, PromGames
+- Vanquish081, Paxly

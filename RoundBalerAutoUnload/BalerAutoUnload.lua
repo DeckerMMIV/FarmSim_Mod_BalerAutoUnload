@@ -13,7 +13,8 @@ BalerAutoUnload.version = (modItem and modItem.version) and modItem.version or "
 
 
 BalerAutoUnload.prerequisitesPresent = function(specializations)
-    return SpecializationUtil.hasSpecialization(Baler, specializations);
+    return SpecializationUtil.hasSpecialization(Baler, specializations)
+        or SpecializationUtil.hasSpecialization(BaleWrapper, specializations)
 end
 
 BalerAutoUnload.delete      = function(self) end
@@ -51,7 +52,11 @@ BalerAutoUnload.setAutoUnloadDelay = function(self, newValue, noEventSend)
 end
 
 BalerAutoUnload.update = function(self,dt)
-    if self.isClient and self.baler ~= nil and self.baler.baleUnloadAnimationName ~= nil then
+    if self.isClient 
+    and (  (self.baler ~= nil and self.baler.baleUnloadAnimationName ~= nil)
+        or self.hasBaleWrapper
+        )
+    then
         if InputBinding.hasEvent(InputBinding.IMPLEMENT_EXTRA4) and self:getIsActiveForInput() then
             self:setAutoUnloadDelay(Utils.getNoNil(self.modAutoUnloadDelay, 0) - 1)
         end
@@ -59,8 +64,8 @@ BalerAutoUnload.update = function(self,dt)
 end
 
 BalerAutoUnload.updateTick = function(self,dt)
-    if self.isServer and self.modAutoUnloadDelay ~= nil and self.modAutoUnloadDelay > 0 and self:getIsTurnedOn() then
-        if self.baler ~= nil then
+    if self.isServer and self.modAutoUnloadDelay ~= nil and self.modAutoUnloadDelay > 0 then
+        if self.baler ~= nil and self:getIsTurnedOn() then
             if self.baler.unloadingState == Baler.UNLOADING_CLOSED then
                 if self:getUnitFillLevel(self.baler.fillUnitIndex) >= self:getUnitCapacity(self.baler.fillUnitIndex) then
                     if (table.getn(self.baler.bales) > 0) and self:isUnloadingAllowed() then
@@ -78,11 +83,27 @@ BalerAutoUnload.updateTick = function(self,dt)
                 end
             end
         end
+        --
+        if self.hasBaleWrapper then
+            if self.baleWrapperState == BaleWrapper.STATE_WRAPPER_FINSIHED then
+                if self.modAutoUnloadTimeout == nil then
+                    self.modAutoUnloadTimeout = g_currentMission.time + (self.modAutoUnloadDelay * 1000)
+                elseif self.modAutoUnloadTimeout < g_currentMission.time then
+                    self:doStateChange(BaleWrapper.CHANGE_BUTTON_EMPTY);
+                end
+            else
+                self.modAutoUnloadTimeout = nil
+            end
+        end
     end
 end
 
 BalerAutoUnload.draw = function(self)
-    if self.isClient and self.baler ~= nil and self.baler.baleUnloadAnimationName ~= nil then
+    if self.isClient 
+    and (  (self.baler ~= nil and self.baler.baleUnloadAnimationName ~= nil)
+        or self.hasBaleWrapper
+        )
+    then
         if self.modAutoUnloadDelay ~= nil and self.modAutoUnloadDelay > 0 then
             g_currentMission:addHelpButtonText(g_i18n:getText("ChangeAutoUnloadDelay"):format(g_i18n:getText("DelaySeconds"):format(self.modAutoUnloadDelay)), InputBinding.IMPLEMENT_EXTRA4, nil, GS_PRIO_NORMAL);
         else
