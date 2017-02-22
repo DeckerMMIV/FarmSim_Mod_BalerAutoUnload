@@ -31,36 +31,60 @@
 <![CDATA[Causes the round-baler and bale-wrappers to automatically unload when 100% full
 
 Set unload-delay between 1-5 seconds or off.
+
+Changelog (1.1.0.24)
+- Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
+- Support for balewrapper
 ]]>
         </en>
         <de>
 <![CDATA[Dieser Mod bewirkt, dass sich die Rundballenpresse nach dem Pressvorgang automatisch öffnet und schließt.
 
 Die Verzögerung zum Öffnen der Presskammer kann von 1-5sec eingestellt (Taste Y) oder auch deaktiviert werden werden (Originalzustand -> Presskammer manuell öffnen)
+
+Changelog (1.1.0.24)
+- Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
+- Support for balewrapper
 ]]>
         </de>
         <fr> <!-- translate.google.com -->
 <![CDATA[Permet à la presse à balles rondes de se décharger automatiquement lorsqu'elle est pleine à 100%
 
 Réglez le délai de déchargement entre 1-5 secondes ou désactivé.
+
+Changelog (1.1.0.24)
+- Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
+- Support for balewrapper
 ]]>
         </fr>
         <pl>
 <![CDATA[Automatyczny wyładunek, gdy prasa rolująca jest w 100% pełna.
 
 Ustwa opóźnienie automatycznego rozładunku pomiędzy 1-5 sekundy lub wyłącz je.
+
+Changelog (1.1.0.24)
+- Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
+- Support for balewrapper
 ]]>
         </pl>
         <es>
 <![CDATA[Este mod hace que se descargue automáticamente la empacadora de balas redondas cuando esta al 100%
 
 Puedes fijar el retardo de la descarga entre 1-5 segundos o desactivar la función.
+
+Changelog (1.1.0.24)
+- Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
+- Support for balewrapper
 ]]>
         </es>
         <it>
 <![CDATA[Scarica automaticamente l'imballatrice quando è piena al 100%
 
 Seleziona il ritardo di scarico tra 1 e 5 secondi o disabilita.
+
+Changelog (1.1.0.24)
+- Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
+- Support for balewrapper
 ]]>
         </it>
     </description>
