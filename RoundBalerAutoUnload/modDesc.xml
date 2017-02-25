@@ -25,6 +25,7 @@
 1.1.0.24
 - Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
 - Support for balewrapper
+- Translations updated by contributors
 ]]></changeLog>
 
     <description>
@@ -36,6 +37,7 @@ Set unload-delay between 1-5 seconds or off.
 Changelog (1.1.0.24)
 - Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
 - Support for balewrapper
+- Translations updated by contributors
 ]]>
         </en>
         <de>
@@ -46,6 +48,7 @@ Die Verzögerung zum Öffnen der Presskammer kann von 1-5sec eingestellt (Taste 
 Changelog (1.1.0.24)
 - Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
 - Support for balewrapper
+- Translations updated by contributors
 ]]>
         </de>
         <fr> <!-- translate.google.com -->
@@ -56,6 +59,7 @@ Réglez le délai de déchargement entre 1-5 secondes ou désactivé.
 Changelog (1.1.0.24)
 - Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
 - Support for balewrapper
+- Translations updated by contributors
 ]]>
         </fr>
         <pl>
@@ -66,6 +70,7 @@ Ustwa opóźnienie automatycznego rozładunku pomiędzy 1-5 sekundy lub wyłącz
 Changelog (1.1.0.24)
 - Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
 - Support for balewrapper
+- Translations updated by contributors
 ]]>
         </pl>
         <es>
@@ -76,6 +81,7 @@ Puedes fijar el retardo de la descarga entre 1-5 segundos o desactivar la funci�
 Changelog (1.1.0.24)
 - Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
 - Support for balewrapper
+- Translations updated by contributors
 ]]>
         </es>
         <it>
@@ -86,6 +92,7 @@ Seleziona il ritardo di scarico tra 1 e 5 secondi o disabilita.
 Changelog (1.1.0.24)
 - Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
 - Support for balewrapper
+- Translations updated by contributors
 ]]>
         </it>
         <ru><![CDATA[Пресс-подборщик для круглых тюков будет автоматически разгружаться при 100% заполнении.
@@ -95,8 +102,9 @@ Changelog (1.1.0.24)
 Changelog (1.1.0.24)
 - Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
 - Support for balewrapper
+- Translations updated by contributors
 ]]>
-		</ru>
+        </ru>
     </description>
 
     <iconFilename>store_BalerAutoUnload.dds</iconFilename>

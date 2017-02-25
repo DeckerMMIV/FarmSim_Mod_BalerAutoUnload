@@ -5,6 +5,14 @@
 1.1.0.24
 - Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
 - Support for balewrapper
+- Russian translation added, by Gonimy_Vetrom (Vasyl'ko)
+
+1.0.2.23
+- Italian translation added, by Paxly
+
+1.0.2.22
+- Spanish translation added, by Vanquish081
+- Polish translation updated, by Ziuta
 
 1.0.2.21
 - Upgraded to FS17
@@ -36,5 +44,5 @@ Credits:
 Script:
 - Decker_MMIV
 Contributors/Translations for this or previous versions:
-- Gonimy_Vetrom, Ziuta, JakobT, Xno, huseyinsayar, ModHub, PromGames
+- Gonimy_Vetrom (Vasyl'ko), Ziuta, JakobT, Xno, huseyinsayar, ModHub, PromGames
 - Vanquish081, Paxly

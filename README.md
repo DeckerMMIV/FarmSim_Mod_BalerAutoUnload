@@ -6,6 +6,11 @@ To read more about this mod, find it on;
 
 
 ## FS17 - Change-log
+1.1.0.24
+- Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
+- Support for balewrapper
+- Russian translation added, by Gonimy_Vetrom (Vasyl'ko)
+
 1.0.2.23
 - Italian translation added, by Paxly
 
