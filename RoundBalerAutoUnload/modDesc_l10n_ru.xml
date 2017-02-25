@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <!-- 
+        Please contribute any other translations at 
+        https://github.com/DeckerMMIV/FarmSim_Mod_BalerAutoUnload
+    -->
+
+    <!-- Add your own name or nickname here, when you contribute to this file's translation, so I know who to put into the credits. -->
+    <translationContributors>
+        Gonimy_Vetrom, Vasyl'ko
+    </translationContributors>
+
+    <!-- Note that 'description' is only here for easier translations. I will manually copy it to ModDesc.XML later. -->
+    <description>
+Пресс-подборщик для круглых тюков будет автоматически разгружаться при 100% заполнении.
+
+Установите время задержки перед выгрузкой 1-5 секунд или отключите её.
+    </description>
+
+    <texts>
+        <text name="ChangeAutoUnloadDelay" text="Изм. время задержки авторазгрузки (%s)" />
+        <text name="DelaySeconds"          text="%d сек." />
+        <text name="DelayOff"              text="Выкл" />
+    </texts>
+</l10n>
