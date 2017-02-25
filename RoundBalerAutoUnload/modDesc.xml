@@ -7,7 +7,7 @@
     NOTE: For contributing translations, DO NOT edit this ModDesc.XML.
           Only modify the corresponding ModDesc_l10n_*.XML file.
 -->    
-    <contributors>Ziuta, ModHub, Vanquish081, Paxly</contributors>
+    <contributors>Ziuta, ModHub, Vanquish081, Paxly, Gonimy_Vetrom (Vasyl'ko)</contributors>
 
     <version>1.1.0.24</version>
 
@@ -18,6 +18,7 @@
         <pl>Auto-rozładunek dla prasy belującej</pl>
         <es>Automatic unload for round-balers</es>
         <it>Automatic unload for round-balers</it>
+        <ru>Автоматическая разгрузка пресс-подборщиков для круглых тюков</ru>
     </title>
     
     <changeLog><![CDATA[
@@ -87,6 +88,15 @@ Changelog (1.1.0.24)
 - Support for balewrapper
 ]]>
         </it>
+        <ru><![CDATA[Пресс-подборщик для круглых тюков будет автоматически разгружаться при 100% заполнении.
+
+Установите время задержки перед выгрузкой 1-5 секунд или отключите её.
+
+Changelog (1.1.0.24)
+- Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
+- Support for balewrapper
+]]>
+		</ru>
     </description>
 
     <iconFilename>store_BalerAutoUnload.dds</iconFilename>
