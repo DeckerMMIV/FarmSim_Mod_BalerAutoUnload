@@ -2,6 +2,9 @@
 
 
 [b][u]Changelog[/u][/b]
+1.1.0.25    
+- Translation updates
+
 1.1.0.24
 - Support for baler-and-wrapper combination; FBP 3135 (Kuhn DLC)
 - Support for balewrapper
